@@ -72,8 +72,6 @@ namespace Pokemon.RestClient
             return res;
         }
 
-
-
         private string SerializeRequestPayload<T>(T payload)
         {
             // no payload

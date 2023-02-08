@@ -15,11 +15,11 @@ namespace Pokemon.Managers
             _shakespeareClient = shakespeareClient;
         }
 
-        public async Task<PokemonOutPutModel> GetPokemonInformationAsync(string idOrName, string? culture)
+        public async Task<PokemonOutPutModel> GetPokemonInformationAsync(string idOrName, string? language)
         {
             var items = await _pokeClient.GetResourceAsync<PokeApiNet.Item>(idOrName);
-            var dataToTranslate = string.IsNullOrWhiteSpace(culture) ? items.FlavorGroupTextEntries.FirstOrDefault() :
-                items.FlavorGroupTextEntries.FirstOrDefault(x => x.Language.Name.Equals(culture));
+            var dataToTranslate = string.IsNullOrWhiteSpace(language) ? items.FlavorGroupTextEntries.FirstOrDefault() :
+                items.FlavorGroupTextEntries.FirstOrDefault(x => x.Language.Name.Equals(language));
 
             var translation = await _shakespeareClient.GetTranslationAsync(dataToTranslate.Text);
 

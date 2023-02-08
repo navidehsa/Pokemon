@@ -19,9 +19,9 @@ public class PokemonController : ControllerBase
     }
 
     [HttpGet("{nameOrId}")]
-    public async Task<IActionResult> GetPokemonAsync(string nameOrId, string? culture)
+    public async Task<IActionResult> GetPokemonAsync(string nameOrId, string? language)
     {
-        var result= await _pokemonManager.GetPokemonInformationAsync(nameOrId, culture);
+        var result= await _pokemonManager.GetPokemonInformationAsync(nameOrId, language);
         return Ok(result);
     }
 }

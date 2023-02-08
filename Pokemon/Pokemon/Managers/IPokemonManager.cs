@@ -4,6 +4,6 @@ namespace Pokemon.Managers
 {
     public interface IPokemonManager
     {
-        Task<PokemonOutPutModel> GetPokemonInformationAsync(string idOrName, string? culture);
+        Task<PokemonOutPutModel> GetPokemonInformationAsync(string idOrName, string? language);
     }
 }
