@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.Formatters;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
+﻿using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace Pokemon.RestClient
 {

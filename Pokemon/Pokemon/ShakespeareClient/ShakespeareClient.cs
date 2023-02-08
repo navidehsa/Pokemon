@@ -14,7 +14,6 @@ namespace Pokemon.ShakespeareClient
             _httpRestClient = httpRestClient;
         }
 
-
         public Task<ShakespeareOutputModel> GetTranslationAsync(string inputText)
         {
 

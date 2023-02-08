@@ -17,7 +17,7 @@ builder.Services.AddSingleton<IShakespeareClient, ShakespeareClient>();
 builder.Services.AddSingleton<IHttpRestClient, HttpRestClient>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(s=>s.EnableAnnotations());
 
 var app = builder.Build();
 
