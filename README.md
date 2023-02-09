@@ -3,7 +3,7 @@ RESTful API that fetches information about a specific Pokemon and returns its de
 
 ## Concepts
 
-The Pokemon api input uses the following parameters:
+The Pokemon api input use the following parameters:
  - `IdOrName` - You can use Id or name of pokemon
  - `language` - You can define specific language to translate
 #
@@ -28,5 +28,6 @@ such as testing with invalid Pokemon names or IDs, and testing error handling
 - Documentation : provide comprehensive documentation in code
 - Authentication and authorization : If the API needs to be secure, we should implement authentication and authorization mechanisms, such as OAuth or JWT
 - Adding try policy with polly for httpclient
+- Maybe using hangfire to handle ratelimit
 
 
